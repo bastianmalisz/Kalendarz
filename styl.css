@@ -1,0 +1,36 @@
+.container{
+    margin-top: 3vh;
+    margin: 0 5vw;
+    display: flex;
+    justify-content: space-around;
+    height: 70vh;
+    }
+.calendar-box{
+    width: 50vw;
+    height: 90%;
+    background-color: blue;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.activities-box{
+    width: 30vw;
+    height: 90%;
+    background-color: silver;
+}
+.cal-week-row{
+    height: 15%;
+    width: 90%;
+    background-color: white;
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.cal-day{
+    width: calc(100% / 8);
+    height: 90%;
+    background-color: black;
+    margin-top: 0.5%;
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <title>Document</title>
+    <style>
+        .container{
+            width: 50vw;height: 40vh;
+            border: 1px solid black;
+            overflow-y: auto;
+
+        }
+    .Planned-Events-Info{
+        width:95%;
+        margin: 0 auto;
+        border: 1px solid rgba(0, 0, 0, 0.123);
+        height: 30%;
+        margin: 3px auto;
+        box-shadow: 10px 0px 1px black;
+        
+  background: url(blur4.jpg);
+  background-size: cover;
+  -webkit-clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 4% 49%, 0% 0%);
+clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0% 100%, 4% 49%, 0% 0%);
+}
+.eventSpan{
+    font-size: 1.2em;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    display:table;
+margin-left: 20%;
+}
+.eventDivKeeper,.eventDivKeeper2{
+    display: flex;
+    flex-direction: row;
+    font-size: 0.85em;
+    height: 50%;
+    margin-left: 5%;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    
+    
+}
+.eventDivKeeper{
+    line-height: 2em;
+}
+.eventSpan-Name, .eventSpan-Name-js{
+ width: 20%;
+ margin: 1px;
+ background: rgba(71, 7, 248, 0.089);
+ border: 1px dotted rgba(0, 0, 0, 0.445);
+ border-radius: 4px;
+ text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.733);
+ text-align: center;
+}
+.eventSpan-Name{
+    font-size: 1em;
+    text-align: center;
+    background: rgba(71, 7, 248, 0.281);
+    
+}
+.eventSpan-FromTime, .eventSpan-FromTime-js{
+    width: 10%;
+    background: rgba(160, 18, 18, 0.096);
+ border: 1px dotted rgba(0, 0, 0, 0.445);
+ border-radius: 4px;
+ text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.733);
+ text-align: center;
+}
+.eventSpan-FromTime{
+    font-size: 1em;
+    text-align: center;
+    background: rgba(160, 18, 18, 0.267);
+}
+.eventSpan-ToTime, .eventSpan-ToTime-js{
+    width: 10%;
+    background: rgba(160, 18, 18, 0.103);
+ border: 1px dotted rgba(0, 0, 0, 0.445);
+ border-radius: 4px;
+ text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.733);
+ text-align: center;
+}
+.eventSpan-ToTime{
+    font-size: 1em;
+    text-align: center;
+    background: rgba(160, 18, 18, 0.267);
+}
+.eventSpan-Desc, .eventSpan-Desc-js{
+    width: 40%;
+    background: rgba(7, 146, 30, 0.123);
+ border: 1px dotted rgba(0, 0, 0, 0.445);
+ border-radius: 4px;
+ text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.733);
+ text-align: center;
+}
+.eventSpan-Desc{
+    background: rgba(7, 146, 30, 0.301);
+    font-size: 1em;
+    text-align: center;
+}
+  
+ 
+    
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="Planned-Events-Info">
+        
+        <div class="eventDivKeeper"> 
+            <span class="eventSpan-Name">
+                    Nazwa wydarzenia: 
+            </span>
+            
+            <span class="eventSpan-FromTime">
+                        Od której:  
+            </span>
+            <span class="eventSpan-ToTime">
+                    Do której:  
+            </span>
+            <span class="eventSpan-Desc">
+                    Opis Wydarzenia:  
+            </span>
+        </div>
+        <div class="eventDivKeeper2"> 
+                <span class="eventSpan-Name-js">
+                       Pobyt<!-- TU WSADZIC ZMIENNA PRZETRZYMUJACA NAZWE WYDARZENIA -->
+                </span>
+                
+                <span class="eventSpan-FromTime-js">
+                            13:00<!-- TU WSADZIC ZMIENNA PRZETRZYMUJACA czas od ktorej -->
+                </span>
+                <span class="eventSpan-ToTime-js">
+                        15:00<!-- TU WSADZIC ZMIENNA PRZETRZYMUJACA czas do ktorej -->
+                </span>
+                <span class="eventSpan-Desc-js">
+                        Wizyta u kolegi<!-- TU WSADZIC ZMIENNA PRZETRZYMUJACA opis wydarzenia --> 
+                </span>
+            </div>
+    </div>
+    <div class="Planned-Events-Info">
+            <span class="eventSpan"></span>
+        </div>
+        <div class="Planned-Events-Info">
+                <span class="eventSpan"></span>
+            </div>
+            <!-- <div class="Planned-Events-Info">
+                </div> -->
+</div>
+</body>
+</html>
