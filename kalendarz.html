@@ -1,68 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="calfav.png" type="image/x-icon" />
-    <link rel="stylesheet" href="styl.css">
-    <title>KalApp</title>
-
-
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Kalendarz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="odbior.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="calendar-box">
-            <div class="calendar-week-row-1 cal-week-row">
-                <div class="calendar-day-col-1 cal-day"></div>
-                <div class="calendar-day-col-2 cal-day"></div>
-                <div class="calendar-day-col-3 cal-day"></div>
-                <div class="calendar-day-col-4 cal-day"></div>
-                <div class="calendar-day-col-5 cal-day"></div>
-                <div class="calendar-day-col-6 cal-day"></div>
-                <div class="calendar-day-col-7 cal-day"></div>
-            </div>
-            <div class="calendar-week-row-2 cal-week-row">
-                <div class="calendar-day-col-1 cal-day"></div>
-                <div class="calendar-day-col-2 cal-day"></div>
-                <div class="calendar-day-col-3 cal-day"></div>
-                <div class="calendar-day-col-4 cal-day"></div>
-                <div class="calendar-day-col-5 cal-day"></div>
-                <div class="calendar-day-col-6 cal-day"></div>
-                <div class="calendar-day-col-7 cal-day"></div>
-            </div>
-            <div class="calendar-week-row-3 cal-week-row">
-                <div class="calendar-day-col-1 cal-day"></div>
-                <div class="calendar-day-col-2 cal-day"></div>
-                <div class="calendar-day-col-3 cal-day"></div>
-                <div class="calendar-day-col-4 cal-day"></div>
-                <div class="calendar-day-col-5 cal-day"></div>
-                <div class="calendar-day-col-6 cal-day"></div>
-                <div class="calendar-day-col-7 cal-day"></div>
-            </div>
-            <div class="calendar-week-row-4 cal-week-row">
-                <div class="calendar-day-col-1 cal-day"></div>
-                <div class="calendar-day-col-2 cal-day"></div>
-                <div class="calendar-day-col-3 cal-day"></div>
-                <div class="calendar-day-col-4 cal-day"></div>
-                <div class="calendar-day-col-5 cal-day"></div>
-                <div class="calendar-day-col-6 cal-day"></div>
-                <div class="calendar-day-col-7 cal-day"></div>
-            </div>
-            <div class="calendar-week-row-5 cal-week-row">
-                <div class="calendar-day-col-1 cal-day"></div>
-                <div class="calendar-day-col-2 cal-day"></div>
-                <div class="calendar-day-col-3 cal-day"></div>
-                <div class="calendar-day-col-4 cal-day"></div>
-                <div class="calendar-day-col-5 cal-day"></div>
-                <div class="calendar-day-col-6 cal-day"></div>
-                <div class="calendar-day-col-7 cal-day"></div>
-            </div>
-        </div>
-        <div class="activities-box">
-        
-        </div>
 
+<body>
+    <div class="first-block">
+        <div class="nazwa-miesiaca"></div>
+        <div class="clock"></div>
+        <div class="buttony"></div>
     </div>
+    <div class="second-block">
+        <div class="prevMonthButt" id="btn" title="Poprzedni miesiąc"></div>
+        <div class="test"></div>
+        <div class="nextMonthButt" title="Poprzedni miesiąc"></div>
+        <div class="addEvent"></div>
+    </div>
+    <div class="third-block">
+        <div class="test2">
+            <h1 class="zaplanowane-h"></h1>
+            <div class="zaplanowane">
+                <div class="krecha"></div>
+                <div class="zaplanowane-content"></div>
+            </div>
+        </div>
+    </div>
+<script src = "scripts/script.js"></script>
 </body>
 </html>
