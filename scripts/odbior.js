@@ -1,4 +1,4 @@
-function odbierz(e){
+let odbierz = (e)=>{
     
 
     let nazwaWyd = document.querySelector('#nazWyd').value;
