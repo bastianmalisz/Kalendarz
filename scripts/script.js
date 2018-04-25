@@ -65,10 +65,10 @@
              eventDay[i] = objectKey[i].dzienWydarzenia;
              NodeList.prototype.forEach = Array.prototype.forEach
              var children = document.querySelector('.test').childNodes;
-             children.forEach(function (item) {
+             children.forEach((item)=> {
                  if (parseInt(item.classList.item(3)) == eventDay[i]) {
                      item.innerHTML += `
-                    <div class='has-Event'></div>  
+                    <div class='has-Event'></div>
                      `
                  }
              });
@@ -96,7 +96,7 @@
      return i;
  }
 
- window.onload = function () {
+ window.onload =  ()=> {
      drawMonth(nazwyMiesiecy, dzienTygodnia, dniTygodniaNazwa, day, rok, dniMiesiecyZwykly, nextMonth);
      startTime();
 
@@ -105,7 +105,7 @@
  // Programowanie klikow na next miesiac i poprzedni miesiac
  let guzik = document.querySelector('.nextMonthButt');
 
- guzik.onclick = function (e) {
+ guzik.onclick = (e)=> {
      miesiac++;
      day = new Date(rok, miesiac, 1).getDay();
      if (day === 0) {
@@ -125,7 +125,7 @@
 
  // poprzedni miesiac
  let guzik2 = document.querySelector('.prevMonthButt');
- guzik2.onclick = function (e) {
+ guzik2.onclick = (e)=> {
      miesiac--;
      day = new Date(rok, miesiac, 1).getDay();
      if (day === 0) {
@@ -142,7 +142,7 @@
      drawMonth(nazwyMiesiecy, dzienTygodnia, dniTygodniaNazwa, day, rok, dniMiesiecyZwykly, nextMonth);
  };
 
- // klikniecie dnia powoduje pojawienie sie okna 
+ // klikniecie dnia powoduje pojawienie sie okna
  $('.test').on('click', '.box', pokazOkno);
  $('.test').on('click', '.box', getLocalStorage);
 
@@ -169,21 +169,21 @@
        <input id="nazWyd" placeholder="Nazwa wydarzenia" type="text" tabindex="1" required autofocus>
      </fieldset>
      <fieldset>
-         <label for="timeFrom">Od : 
-             <input id="timeFrom" type="time" tabindex="2" required autocomplete >  
+         <label for="timeFrom">Od :
+             <input id="timeFrom" type="time" tabindex="2" required autocomplete >
                                  Do:
                                  <input id="timeTo" type="time" tabindex="3" required autocomplete>
          </label>
-         
-         
-         
+
+
+
      </fieldset>
      <fieldset>
          <label for="timeFrom">Opisz przyszłe wydarzenie: </label><br>
          <textarea id="opisWyd" placeholder="Opis wydarzenia" type="textarea" tabindex="4" required autofocus rows="6" cols="30"></textarea>
      </fieldset>
      <button onClick="odbierz()"name="submit" type="submit" id="wrzucDane" data-submit="Wysylanie">Dodaj</button>
-     
+
    </form>
                  `;
      document.querySelector('.addEvent').classList.add("pojaw");
@@ -199,7 +199,7 @@
      // Web Storage nie wspierany
      console.log("niedostepny");
  }
- //RYSOWANIE ZRZUCONYCH W LOCAL STORAGE DANYCH NA APLIKACJE (HTML)   
+ //RYSOWANIE ZRZUCONYCH W LOCAL STORAGE DANYCH NA APLIKACJE (HTML)
  //proba wyciagniecia z local storage itemu oraz sparsowania go do obiektu spowrotem
  function getLocalStorage() {
      function clearPlace() {
@@ -222,26 +222,26 @@
              miejsce.innerHTML += `
     <div class="Planned-Events-Info" id="` + key + `" >
     <div class="exit-Box" title="Usunięcie wpisu z kalendarza"></div>
-    <div class="eventDivKeeper"> 
+    <div class="eventDivKeeper">
         <span class="eventSpan-Name">
-                Nazwa wydarzenia: 
+                Nazwa wydarzenia:
         </span>
-        
+
         <span class="eventSpan-FromTime">
-                    Od której:  
+                    Od której:
         </span>
         <span class="eventSpan-ToTime">
-                Do której:  
+                Do której:
         </span>
         <span class="eventSpan-Desc">
-                Opis Wydarzenia:  
+                Opis Wydarzenia:
         </span>
     </div>
-    <div class="eventDivKeeper2"> 
+    <div class="eventDivKeeper2">
             <span class="eventSpan-Name-js">
                     ` + objectKey[i].nazwaWydarzenia + `
             </span>
-            
+
             <span class="eventSpan-FromTime-js">
                     ` + objectKey[i].odKiedy + `
             </span>
@@ -249,7 +249,7 @@
                     ` + objectKey[i].doKiedy + `
             </span>
             <span class="eventSpan-Desc-js">
-                    ` + objectKey[i].opisWydarzenia + ` 
+                    ` + objectKey[i].opisWydarzenia + `
             </span>
         </div>
     </div>`;
@@ -257,9 +257,9 @@
 
          }
      }
-     // USUWANIE  WYBRANEGO ELEMENTU Z LOCAL STORAGE 
+     // USUWANIE  WYBRANEGO ELEMENTU Z LOCAL STORAGE
 
-     $('.zaplanowane-content').on('click', '.exit-Box', function () {
+     $('.zaplanowane-content').on('click', '.exit-Box', ()=> {
          if (confirm('Czy jesteś pewny, że chcesz usunąć wpis z kalendarza?')) {
              localStorage.removeItem(this.parentElement.id);
              window.location.reload();
